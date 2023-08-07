@@ -75,7 +75,9 @@ body {
     font-size: 15px;
     font-family: var(--ff-League-Spartan);
     min-height: 100vh;
-    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*
     background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
     background-position: right top, left bottom;
