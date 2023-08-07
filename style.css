@@ -78,11 +78,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*
-    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
-    background-position: right top, left bottom;
-    background-repeat: no-repeat;
-    */
 }
 
 main {
@@ -93,6 +88,12 @@ main {
     -webkit-box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
+    background-image: 
+        url("images/bg-pattern-top-desktop.svg"), 
+        url("images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, bottom right;    
+    background-repeat: no-repeat;
+    background-size: 50%, 70%;
 }
 
 .header-container h1 {
@@ -138,6 +139,7 @@ main {
     gap: 0.325rem;
     height: 11px;
     max-width: 100%;
+    align-items: center;
 }
 
 .rate p {
@@ -262,6 +264,10 @@ ul {
 
     main {
         padding: 1.5rem;
+        background-image: 
+            url("images/bg-pattern-top-mobile.svg")
+            url("images/bg-pattern-bottom-mobile.svg");
+        background-size: 100%, 1000%;
     }
 }
 
