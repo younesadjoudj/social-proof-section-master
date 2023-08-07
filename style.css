@@ -1,0 +1,285 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --clr-Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --clr-Soft-Pink: hsl(333, 80%, 67%);
+
+    /* Neutral */
+    --clr-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --clr-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --clr-White: hsl(0, 0%, 100%);
+
+    /* Font family */
+    --ff-League-Spartan: 'League Spartan', sans-serif;
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+/* CSS Reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+ */
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* General styling */
+
+body {
+    background-color: var(--clr-Light-Grayish-Magenta);
+    font-size: 15px;
+    font-family: var(--ff-League-Spartan);
+    min-height: 100vh;
+    margin: 5rem 0;
+    /*
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+    */
+}
+
+main {
+    background-color: var(--clr-White);
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 4.5rem 8rem 7.5rem 8rem;
+    -webkit-box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 7px 13px 2px rgba(34, 60, 80, 0.2);
+}
+
+.header-container h1 {
+    color: var(--clr-Very-Dark-Magenta);
+    font-size: 2.5rem;
+    line-height: 0.9;
+    width: 40%;
+    margin-bottom: 1.2rem;
+}
+
+.header-container p {
+    color: var(--clr-Dark-Grayish-Magenta);
+    font-weight: var(--fw-medium);
+    width: 60%;
+    text-wrap: balance;
+}
+
+.top-container {
+    display: flex;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.rating-container {
+    position: relative;
+    right: 10rem;
+    align-self: center;
+}
+
+.rate {
+    background-color: var(--clr-Light-Grayish-Magenta);
+    display: flex;
+    align-items: center;
+    gap: 1.325rem;
+    width: 350px;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.rate .stars {
+    display: flex;
+    gap: 0.325rem;
+    height: 11px;
+    max-width: 100%;
+}
+
+.rate p {
+    color: var(--clr-Very-Dark-Magenta);
+    font-weight: var(--fw-bold);
+    font-size: 13px;
+}
+
+.rate-2 {
+    position: relative;
+    left: 2.5rem;
+}
+
+.rate-3 {
+    position: relative;
+    left: 5rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--clr-Very-Dark-Magenta);
+    font-weight: var(--fw-medium);
+    padding: 2rem 1.5rem;
+    width: 33.33%;
+    border-radius: 0.7rem;
+}
+
+.card img {
+    border-radius: 50%;
+    height: 2.5rem;
+}
+
+.card .name, .card p {
+    color: var(--clr-White);
+}
+
+.card p {
+    text-wrap: balance;
+}
+
+.card .verified {
+    color: var(--clr-Soft-Pink);
+}
+
+.top-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-2 {
+    position: relative;
+    top: 1.3rem;
+}
+
+.card-3 {
+    position: relative;
+    top: 2.6rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.225;
+}
+
+@media only screen and (max-width: 1550px) {
+    .top-container {
+        flex-direction: column;
+        justify-content: center; 
+        margin-bottom: 2rem;
+    }
+
+    .header-container p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .header-container h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rate-2, .rate-3, .rating-container {
+        position: initial;
+    }
+
+    .rate {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-2, .card-3 {
+        position: initial;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .rate {
+        flex-direction: column;
+    }
+
+    .rate p {
+        text-align: center;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .top-card {
+        text-align: center;
+    }
+    .rate {
+        width: auto;
+    }
+
+    .stars {
+        height: 0.8rem;
+    }
+
+    .header-container h1 {
+        font-size: 2rem;
+    }
+}
+/*
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*/
